@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
+import Logo from "../assets/images/logo.png";
+
 const Links = [
 	{
 		url: "https://mirror.xyz/justinrogers.eth/pECbFkbLM9YfArHI_wu7w3bjxpyk-nVIqZQWpNyrkWI",
@@ -57,27 +59,29 @@ const Navbar = () => {
 					/>
 
 					<HStack spacing={8} alignItems={"center"}>
-						<Box>Genius</Box>
-						<HStack
-							as={"nav"}
-							spacing={4}
-							display={{ base: "none", md: "flex" }}
-						>
-							{Links.map(({ url, title }) => (
-								<NavLink key={url} href={url}>
-									{title}
-								</NavLink>
-							))}
-						</HStack>
+						<Box>
+							<img src={Logo} alt="Logo" width="50px" />
+						</Box>
 					</HStack>
 
 					<Flex alignItems={"center"}>
 						<Stack direction={"row"} spacing={7}>
+							<Menu>
+								<HStack
+									as={"nav"}
+									spacing={4}
+									display={{ base: "none", md: "flex" }}
+								>
+									{Links.map(({ url, title }) => (
+										<NavLink key={url} href={url}>
+											{title}
+										</NavLink>
+									))}
+								</HStack>
+							</Menu>
 							<Button onClick={toggleColorMode}>
 								{colorMode === "light" ? <MoonIcon /> : <SunIcon />}
 							</Button>
-
-							<Menu></Menu>
 						</Stack>
 					</Flex>
 				</Flex>
