@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 
 import { constructOptions, constructData } from "./data";
 
-import CommingSoon from "./CommingSoon";
+import Banner from "./Banner";
 
 const SupplyChart = () => {
 	return (
@@ -15,7 +15,7 @@ const SupplyChart = () => {
 			rounded={"lg"}
 			position="relative"
 		>
-			<CommingSoon />
+			<Banner />
 			<Box p="3">
 				<Line
 					options={constructOptions("top", "SUPPLY")}

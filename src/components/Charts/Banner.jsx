@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-const CommingSoon = () => {
+const Banner = () => {
 	return (
 		<Box
 			width="100%"
@@ -13,9 +13,9 @@ const CommingSoon = () => {
       fontWeight="bold"
       fontSize="1.5rem"
 		>
-			Comming soon...
+			Coming soon...
 		</Box>
 	);
 };
 
-export default CommingSoon;
+export default Banner;
